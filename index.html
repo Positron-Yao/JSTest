@@ -22,6 +22,7 @@
     <div id="fileText"></div>
 
     <script>
+        var csv;
         fetch('./1.csv')
         .then(response => response.text())
         .then(text => {
