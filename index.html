@@ -17,17 +17,20 @@
 </head>
 
 <body>
-    <h1 align="center">读取文件</h1>
-    <p>1.txt: </p>
+    <h1>读取文件</h1>
+    <p>1.csv: </p>
     <div id="fileText"></div>
 
     <script>
-        fetch('./1.txt')
+        fetch('./1.csv')
         .then(response => response.text())
         .then(text => {
-            document.getElementById('fileText').innerText = text;
+            csv = text;
         })
         .catch(error => console.error('爆了', error));
+
+        const lines = csv.split('\n');
+        const colums = lines.split(',')
     </script>
 
 
