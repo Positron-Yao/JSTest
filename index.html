@@ -7,9 +7,20 @@
 </head>
 
 <body>
-    <h1 align="center">主标题</h1>
-    <p>hhh</p>
-    <a href="./1.txt">好好好</a>
+    <h1 align="center">读取文件</h1>
+    <p>1.txt: </p>
+    <div id="text"></div>
+
+    <script>
+        fetch('./1.txt')
+        .then(response => response.text())
+        .then(text => {
+            document.getElementById('text').innerText = text;
+        })
+        .catch(error => console.error('爆了', error));
+    </script>
+
+
 
 </body>
 
