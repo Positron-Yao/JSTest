@@ -4,12 +4,17 @@
 <head>
     <meta charset="utf-8">
     <title>Title</title>
+    <style>
+        #fileText{
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
     <h1 align="center">读取文件</h1>
     <p>1.txt: </p>
-    <div id="text"></div>
+    <div id="fileText"></div>
 
     <script>
         fetch('./1.txt')
