@@ -9,44 +9,7 @@
 <body>
     <h1 align="center">主标题</h1>
     <p>hhh</p>
-
-    <script>
-        // GitHub 仓库的信息
-        const owner = 'positron_yao'; // 你的用户名或组织名
-        const repo = 'JSTest'; // 你的仓库名
-        const path = '1.txt'; // 文件在仓库中的路径
-
-        // 构建 API 请求 URL
-        const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
-
-        // 发起 GET 请求
-        const xhr = new XMLHttpRequest();
-        xhr.open('GET', apiUrl);
-        xhr.setRequestHeader('Accept', 'application/vnd.github.v3+json');
-
-        xhr.onload = function () {
-            if (xhr.status === 200) {
-                // 解析响应 JSON
-                const response = JSON.parse(xhr.responseText);
-
-                // 解码文件内容（Base64 编码）
-                const content = atob(response.content);
-
-                // 打印文件内容
-                console.log('File content:', content);
-            } else {
-                console.error('Failed to fetch file:', xhr.statusText);
-            }
-        };
-
-        xhr.onerror = function () {
-            console.error('Failed to fetch file:', xhr.statusText);
-        };
-
-        // 发送请求
-        xhr.send();
-
-    </script>
+    <a href="./1.txt">好好好</a>
 
 </body>
 
