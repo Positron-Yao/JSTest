@@ -23,15 +23,18 @@
 
     <script>
         var csv;
+        var lines;
+        var colums;
         fetch('./1.csv')
         .then(response => response.text())
         .then(text => {
             csv = text;
+            lines = csv.split('\n');
+            colums = lines.split(',');
         })
         .catch(error => console.error('爆了', error));
 
-        const lines = csv.split('\n');
-        const colums = lines.split(',')
+        
     </script>
 
 
